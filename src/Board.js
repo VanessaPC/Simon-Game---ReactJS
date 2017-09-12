@@ -158,7 +158,7 @@ export class Board extends Component {
                  countTrues ++;
                  console.log(' it´s right');
                     
-                    if(len + 1 === 3){
+                    if(len + 1 === 20){
                       this.initialState();
 
                       this.setState({
@@ -246,7 +246,7 @@ export class Board extends Component {
           {this.state.complexity === '' ? <div  className="text">
           <p> Choose a difficulty and start game </p>
         </div> : null}
-              
+        <div className="text">{this.state.winner}</div>
           {this.state.visibility ? <div  className="text-red">
           <p> Choose a difficulty </p>
         </div> : null}
@@ -292,7 +292,7 @@ export class Board extends Component {
           </button>
           <button value="start" onClick={this.reStart} className="secondary-button"> 
             Re start 
-          </button>{this.state.winner}
+          </button>
           </div>
         </div>
       </div>
